@@ -1,0 +1,651 @@
+/* HOME PARTE */
+
+html{
+    scroll-behavior:smooth;
+}
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    padding: 2% 0% 2% 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho.anima {
+    background: #ff0055e5;
+    animation: barraBaixo 0.60s ease-out;
+    padding: 2% 0% 2% 15%;
+}
+
+.cabecalho.anima span {
+    color: #fff;
+}
+
+.cabecalho.anima .menus__Textos :hover {
+    color: #c7c3c3;
+}
+
+@keyframes barraBaixo {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+.cabecalho__texto {
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cabecalho__texto a{
+    color: #fff;
+}
+
+.apresentacao__texto {
+    padding: 10% 0 2% 15%;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.apresentacao__nome {
+    padding: 2% 0% 0% 15%;
+    font-size: 2.7rem;
+    color: #ff0055e5;
+}
+
+.texto__type{
+    padding-top: 8%;
+}
+
+.texto__type span{
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+.btn__contrate {
+    display: flex;
+    width: 15%;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    color: #000;
+    padding: 21.5px 0;
+    text-decoration: none;
+    justify-content: center;
+    margin-top: 8%;
+    background-color: #ff0055;
+    transition: background-color 0.7s;
+    cursor: pointer;
+    position: relative;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.btn__contrate::after, .btn__contrate::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 0, rgb(221, 220, 220));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 25px;
+    animation: 2.8s spin linear infinite;
+}
+
+.btn__contrate::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin{
+    from {
+        --angle: 0deg;
+    }
+
+    to{
+        --angle: 360deg
+    }
+}
+.btn__contrate a{
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.btn__contrate:hover {
+    background-color: #be003f;
+
+}
+
+.menus__Textos {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    padding: 15px 4% 1% 0%;;
+    gap: 4%;
+    font-size: 1.5rem;
+    white-space: nowrap;
+
+}
+
+.menus__Textos a {
+    color: #fff; 
+}
+
+.menus__Textos :hover{
+    color: #ff0055e5;
+}
+
+span {
+    color: #ff0055e5;
+}
+/* SOBRE MIM PARTE */
+.conteudo__sobre {
+    display: flex;
+    align-items: center;
+}
+
+.sobre {
+    display: flex;
+    text-align: justify;
+    background-color: #fff;
+    padding: 10% 10%;
+    margin-top: 20%;
+}
+
+.titulo__sobre {
+    color: #ff0055e5;
+    padding-bottom: 10%;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+    display: inline-block;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px)
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.parte__direita {
+    flex: 1;
+}
+
+.parte__direita p {
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.parte__esquerda {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.parte__esquerda img {
+    height: 300px;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.parte__direita strong {
+    color: #ff0055
+}
+
+/* HABILIDADES PARTE */
+
+.parte__habilidades {
+    display: flex;
+    text-align: justify;
+    padding: 12% 10%;
+    background: url(./assets/skills.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.coluna {
+    width: 65%;
+}
+
+.titulo__habilidades {
+    text-align: center;
+    padding-bottom: 8%;
+    font-weight: 600;
+    font-size: 2.5rem;
+    animation: flutuar 3s ease-in-out infinite;
+    color: #ff0055e5;
+}
+
+.texto__habilidades {
+    margin-bottom: 10%;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.barras {
+    margin-bottom: 15px;
+}
+
+.barra__progresso {
+    background-color: #ffffff9c;
+    border-radius: 5px;
+    height: 12px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.preencher {
+    background-color: #ff0055e5;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.info__habilidades {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.info__habilidades h3 {
+    margin: 0;
+    padding-right: 10px;
+    color: #fff;
+}
+
+.info__habilidades span {
+    color: #fff;
+}
+
+/* HOBBIES PARTE */
+
+.hobbies__container {
+    display: flex;
+    text-align: justify;
+    padding: 5% 20%;
+    background: #fff;
+}
+
+.hobbies__titulo {
+    color: #ff0055e5;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 5%;
+    font-weight: 600;
+    font-size: 2.5rem;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.hobbies__parte {
+    margin-bottom: 2%;
+}
+
+.hobbies__parte p {
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 5%;
+}
+
+.lista__hobbies img{
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+}
+
+.hobbies_nomes {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.lista__hobbies {
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.lista__hobbies li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+/* FORMAÇÃO PARTE */
+
+.formacao__container {
+    display: flex;
+    text-align: justify;
+    background: #f3f2f2;
+    padding: 2.2% 20% 10% 20%;
+}
+
+.formacao__texto {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.formacao__Foto {
+    padding-bottom: 3%;
+}
+
+.formacao__Foto img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.formacao__lista img {
+    border-radius: 10px;
+}
+
+.formacao__lista h4{
+    color: #ff0055e5;
+}
+
+.formacao__lista p {
+    color: #747474;
+}
+
+.formacao__titulo {
+    color: #ff0055e5;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 2.5rem;
+    padding-bottom: 5%;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.formacao__lista li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formacao__lista {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    gap: 50px;
+    flex-wrap: wrap;
+    flex: 100;
+}
+
+.formacao__lista img {
+    width: 125px;
+    height: 125px;
+}
+
+/* PROJETOS PARTE */
+
+.projetos {
+    background: url(./assets/projects.jpg);
+    padding: 5% 10%;
+    background-size: cover;
+}
+
+.projetos p {
+    padding-top: 5%;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #F5F7F8;
+}
+
+.projetos__titulo {
+    color: #ff0055e5;
+    text-align: center;
+    padding: 3%;
+    font-weight: 600;
+    font-size: 2.5rem;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.botoes__container {
+    display: flex;
+    justify-content:center;
+    margin-top: 5%;
+    gap: 1%;
+}
+
+.botoes {
+    margin: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #ff0055e5;
+    border-radius: 25px;
+    transition: background-color 0.6s;
+    height: 80px;
+    width: 200px;
+    text-align: center;
+}
+
+.botoes:hover {
+    background-color: #ff0055a8;
+
+}
+
+.botoes__container a {
+    padding-top: 27px;
+}
+
+/* CONTATOS PARTE */
+
+.contatos .container{
+    background: #f3f2f2;
+    padding-bottom: 2%;
+}
+
+.contato__esquerdo {
+    text-align: center;
+}
+
+.contato__direito {
+    padding: 2% 30% 0 30%;
+}
+
+.contato__esquerdo h1 {
+    font-size: 3rem;
+    color: #ff0055;
+    padding-top: 5%;
+    animation: flutuar 3s ease-in-out infinite;}
+
+.contato__esquerdo p {
+    font-size: 1.3rem;
+    color: #000;
+    padding-top: 1%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .btn__enviar {
+    background: #ff0055;
+    color: #fff;
+    cursor: pointer;
+    height: 80px;
+    width: 200px;
+    border-radius: 25px;
+    border:none;
+    font-size: 20px;
+    transition: background-color 0.6s;
+}
+
+form .btn__enviar:hover {
+    background-color: #be003f;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    resize: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.bi-whatsapp {
+    color: #02a510;
+}
+
+.bi-envelope-at {
+    color: #da1717;
+}
+
+/* RODAPE PARTE */
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #ff0055;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.rodape i {
+    margin-right: 8px;
+}
+
+/* Código responsivo para Mobile */
+
+@media (max-width: 768px) {
+    body {
+        background: url("./assets/background.jpg") no-repeat center;
+        height: 100vh;
+        background-size:cover;
+    }
+
+    .texto__type {
+        display: none;
+    }
+
+    .menus__Textos {
+        display: none;
+    }
+
+    .apresentacao__nome {
+        font-size: 2.2rem;
+    }
+
+    .apresentacao__texto {
+        font-size: 1.5rem;
+        padding-top: 40%;
+    }
+
+    .parte__direita p {
+        align-items: center;
+    }
+
+    .parte__esquerda img {
+        display: none;
+    }
+
+    .btn__contrate {
+        width: 50%;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    .formacao__lista, .lista__hobbies {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formacao__lista img, .lista__hobbies img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .botoes {
+        width: 100%;
+    }
+
+    .btn__enviar {
+        width: 100%;
+    }
+
+    .contato__direito {
+        padding: 0 5%;
+    }
+
+    
+    .parte__habilidades {
+        background: #c7c3c3;
+    }
+
+    
+    .parte__direita {
+        padding-right: 25%;
+    }
+
+}
+
+/* Código responsivo para Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .apresentacao__nome {
+        font-size: 3rem;
+    }
+
+    .apresentacao__texto {
+        font-size: 1.8rem;
+    }
+
+    .parte__esquerda img {
+        height: 150px;
+        width: auto;
+    }
+
+    .formacao__lista img, .lista__hobbies img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .botoes {
+        width: 150px;
+    }
+    
+    .btn__contrate {
+        width: 50%;
+    }
+
+    .menus__Textos {
+        display: none;
+    }
+}
