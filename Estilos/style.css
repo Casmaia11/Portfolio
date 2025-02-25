@@ -48,6 +48,34 @@ html{
     color: #fff;
 }
 
+/* Estilos Menu Hambúrguer */
+.menu__hamburguer {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+
+.menu__hamburguer .barra {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+/* Estilos menu Hambúrguer aberto */
+.menu__hamburguer.ativo .barra:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu__hamburguer.ativo .barra:nth-child(2) {
+    opacity: 0;
+}
+
+.menu__hamburguer.ativo .barra:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 .apresentacao__texto {
     padding: 10% 0 2% 15%;
     font-size: 1.7rem;
@@ -544,108 +572,179 @@ input, textarea {
 /* Código responsivo para Mobile */
 
 @media (max-width: 768px) {
-    body {
-        background: url("./assets/background.jpg") no-repeat center;
-        height: 100vh;
-        background-size:cover;
+    .cabecalho {
+        padding: 5% 5%;
     }
 
-    .texto__type {
-        display: none;
+    .cabecalho__texto {
+        font-size: 1.8rem;
+    }
+
+    .menu__hamburguer {
+        display: flex;
     }
 
     .menus__Textos {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ff0055e5;
+        padding: 10px 0;
     }
 
-    .apresentacao__nome {
-        font-size: 2.2rem;
+    .menus__Textos.ativo {
+        display: flex;
+    }
+
+    .menus__Textos li {
+        text-align: center;
+        padding: 10px 0;
     }
 
     .apresentacao__texto {
-        font-size: 1.5rem;
-        padding-top: 40%;
+        padding: 20% 5% 5% 5%;
+        font-size: 1.2rem;
     }
 
-    .parte__direita p {
-        align-items: center;
+    .apresentacao__nome {
+        padding: 5% 5% 0% 5%;
+        font-size: 2rem;
     }
 
-    .parte__esquerda img {
-        display: none;
+    .texto__type span {
+        font-size: 2rem;
     }
 
     .btn__contrate {
         width: 50%;
+        font-size: 1.2rem;
+        padding: 15px 0;
     }
 
-    input, textarea {
-        width: 100%;
-    }
-
-    .formacao__lista, .lista__hobbies {
+    .conteudo__sobre {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .formacao__lista img, .lista__hobbies img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .botoes {
-        width: 100%;
-    }
-
-    .btn__enviar {
-        width: 100%;
-    }
-
-    .contato__direito {
-        padding: 0 5%;
-    }
-
-    
-    .parte__habilidades {
-        background: #c7c3c3;
-    }
-
-    
-    .parte__direita {
-        padding-right: 25%;
-    }
-
-}
-
-/* Código responsivo para Tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .apresentacao__nome {
-        font-size: 3rem;
-    }
-
-    .apresentacao__texto {
-        font-size: 1.8rem;
+        
     }
 
     .parte__esquerda img {
-        height: 150px;
-        width: auto;
+        width: 100%;
+        height: auto;
     }
 
-    .formacao__lista img, .lista__hobbies img {
+    .parte__direita {
+        padding: 5%;
+    }
+
+    .titulo__sobre {
+        font-size: 2rem;
+    }
+
+    .parte__direita p {
+        font-size: 1.1rem;
+    }
+
+    .parte__habilidades {
+        padding: 10% 5%;
+    }
+
+    .coluna {
+        width: 100%;
+    }
+
+    .titulo__habilidades {
+        font-size: 2rem;
+    }
+
+    .texto__habilidades {
+        font-size: 1.1rem;
+    }
+
+    .hobbies__container {
+        padding: 5% 5%;
+    }
+
+    .hobbies__titulo {
+        font-size: 2rem;
+    }
+
+    .hobbies__parte p {
+        font-size: 1.1rem;
+    }
+
+    .lista__hobbies {
+        gap: 20px;
+    }
+
+    .lista__hobbies img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .hobbies_nomes {
+        font-size: 1rem;
+    }
+
+    .formacao__container {
+        padding: 5% 5%;
+    }
+
+    .formacao__titulo {
+        font-size: 2rem;
+    }
+
+    .formacao__texto {
+        font-size: 1.1rem;
+    }
+
+    .formacao__lista {
+        gap: 20px;
+    }
+
+    .formacao__lista img {
         width: 100px;
         height: 100px;
     }
 
-    .botoes {
-        width: 150px;
-    }
-    
-    .btn__contrate {
-        width: 50%;
+    .projetos {
+        padding: 5% 5%;
     }
 
-    .menus__Textos {
-        display: none;
+    .projetos__titulo {
+        font-size: 2rem;
+    }
+
+    .projetos p {
+        font-size: 1.1rem;
+    }
+
+    .botoes {
+        width: 100%;
+    }
+
+    .contato__direito {
+        padding: 5% 5%;
+    }
+
+    .contato__esquerdo h1 {
+        font-size: 2rem;
+    }
+
+    .contato__esquerdo p {
+        font-size: 1.1rem;
+    }
+
+    input, textarea {
+        font-size: 16px;
+    }
+
+    .btn__enviar {
+        font-size: 16px;
+    }
+
+    .rodape {
+        font-size: 0.9rem;
     }
 }
