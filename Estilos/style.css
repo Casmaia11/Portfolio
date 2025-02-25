@@ -54,6 +54,7 @@ html{
     flex-direction: column;
     gap: 5px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .menu__hamburguer .barra {
