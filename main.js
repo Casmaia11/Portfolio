@@ -40,3 +40,9 @@ form.addEventListener('submit', e => {
         });
 });
 
+// Script Menu Hambúrguer
+
+document.getElementById('menuHamburguer').addEventListener('click', function() {
+    this.classList.toggle('ativo');
+    document.querySelector('.menus__Textos').classList.toggle('ativo');
+});
