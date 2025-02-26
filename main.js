@@ -15,7 +15,7 @@ window.addEventListener("scroll", () => {
 // Script Type Text
 
 var texto = new Typed(".tipando", {
-    strings: ["Front-end Developer"],
+    strings: ["Front-end Developer", "com foco em", "HTML", "CSS", "Java-script", "mySQL", "e React.js"],
     typeSpeed: 60,
     backSpeed: 60,
     loop: true
