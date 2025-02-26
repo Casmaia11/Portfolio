@@ -79,18 +79,20 @@ html{
 
 .apresentacao__texto {
     padding: 10% 0 2% 15%;
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: #fff;
+    font-weight: 400;
 }
 
 .apresentacao__nome {
-    padding: 2% 0% 0% 15%;
+    padding: 5% 0% 0% 15%;
     font-size: 2.7rem;
     color: #ff0055e5;
 }
 
 .texto__type{
     padding-top: 8%;
+    font-weight: 600;
 }
 
 .texto__type span{
@@ -606,17 +608,21 @@ input, textarea {
     }
 
     .apresentacao__texto {
-        padding: 20% 5% 5% 5%;
-        font-size: 1.2rem;
+        padding: 50% 5% 1% 5%;
+        font-size: 1.8rem;
     }
 
     .apresentacao__nome {
-        padding: 5% 5% 0% 5%;
-        font-size: 2rem;
+        padding: 20% 5% 45% 5%;
+        font-size: 1.6rem;
     }
 
     .texto__type span {
         font-size: 2rem;
+    }
+
+    .texto__type {
+        padding: 25% 0 20%;
     }
 
     .btn__contrate {
@@ -627,7 +633,6 @@ input, textarea {
 
     .conteudo__sobre {
         flex-direction: column;
-        
     }
 
     .parte__esquerda img {
