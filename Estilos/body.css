@@ -23,4 +23,8 @@ body {
         background: url("./assets/background-mobile.jpg")  no-repeat center;
     }
 
+    p {margin: 0;
+       padding: 0;
+    }
+
 }
